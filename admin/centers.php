@@ -67,18 +67,33 @@ require_once __DIR__ . '/layout.php';
 
     <!-- LIST VIEW -->
     <div id="list-view">
+      <div class="admin-table-controls">
+        <div class="admin-table-search">
+          <label for="centers-table-search">Search centers</label>
+          <input type="search" class="input" id="centers-table-search" placeholder="Search by name, barangay, capacity, or status">
+        </div>
+        <div class="admin-table-page-size">
+          <label for="centers-page-size">Rows</label>
+          <select class="input select" id="centers-page-size">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+      </div>
       <div class="data-table-wrapper">
         <table class="data-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Barangay</th>
-              <th>Capacity</th>
-              <th>Status</th>
+              <th class="sortable-th" data-admin-table="centers" data-sort-key="name">Name</th>
+              <th class="sortable-th" data-admin-table="centers" data-sort-key="barangay">Barangay</th>
+              <th class="sortable-th" data-admin-table="centers" data-sort-key="capacity">Capacity</th>
+              <th class="sortable-th" data-admin-table="centers" data-sort-key="status">Status</th>
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="centers-table-body">
             <?php foreach ($allCenters as $center): ?>
               <tr id="row-<?= (int)$center['id'] ?>">
                 <td style="font-weight: 600;"><?= htmlspecialchars($center['name'], ENT_QUOTES, 'UTF-8') ?></td>
@@ -103,6 +118,10 @@ require_once __DIR__ . '/layout.php';
             <?php endif; ?>
           </tbody>
         </table>
+      </div>
+      <div class="admin-table-footer">
+        <div class="admin-table-summary" id="centers-table-summary"></div>
+        <div class="admin-pagination" id="centers-pagination" aria-label="Evacuation centers pagination"></div>
       </div>
     </div>
 
@@ -214,6 +233,7 @@ require_once __DIR__ . '/layout.php';
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+  <script src="../js/adminTableControls.js"></script>
   <script>
     'use strict';
 
@@ -279,6 +299,49 @@ require_once __DIR__ . '/layout.php';
 
     const editData = <?= json_encode($editData ?: null) ?>;
     const editImages = <?= json_encode($editImages) ?>;
+    const adminCenters = <?= json_encode($allCenters, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
+    const adminCenterById = new Map(adminCenters.map((center) => [String(center.id), center]));
+    const adminTable = window.AdminTableControls;
+
+    adminTable.initAdminDataTable({
+      tableId: 'centers',
+      rows: adminCenters,
+      searchableKeys: ['name', 'barangay', 'capacity', 'status'],
+      defaultSortKey: 'name',
+      defaultSortDirection: 'asc',
+      defaultPageSize: 10,
+      searchInputId: 'centers-table-search',
+      pageSizeSelectId: 'centers-page-size',
+      tbodyId: 'centers-table-body',
+      summaryId: 'centers-table-summary',
+      paginationId: 'centers-pagination',
+      renderEmptyRow: () => '<tr><td colspan="5" style="text-align:center; padding: var(--space-8); color: var(--color-text-tertiary);">No evacuation centers found</td></tr>',
+      renderRow: (center) => {
+        const status = center.status === 'active' ? 'active' : 'inactive';
+        const capacity = center.capacity !== null && center.capacity !== ''
+          ? Number(center.capacity).toLocaleString()
+          : '&mdash;';
+        return `
+          <tr id="row-${center.id}">
+            <td style="font-weight:600;">${adminTable.escapeHtml(center.name)}</td>
+            <td>${adminTable.escapeHtml(center.barangay || '')}</td>
+            <td>${capacity}</td>
+            <td>
+              <span class="badge badge--${status}">
+                <span class="badge__dot"></span>
+                ${status.charAt(0).toUpperCase() + status.slice(1)}
+              </span>
+            </td>
+            <td>
+              <div class="data-table__actions">
+                <button class="btn btn--ghost" style="font-size:0.75rem;" onclick="showForm('edit', ${parseInt(center.id, 10)})">Edit</button>
+                <button class="btn btn--ghost" style="font-size:0.75rem; color:var(--color-status-error);" onclick="deleteCenter(${parseInt(center.id, 10)})">Delete</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      },
+    });
 
     // ============================================
     // SIMPLE TOAST
@@ -721,7 +784,10 @@ require_once __DIR__ . '/layout.php';
     // ============================================
     // DELETE CENTER
     // ============================================
-    async function deleteCenter(centerId, centerName) {
+    async function deleteCenter(centerId, centerName = null) {
+      if (centerName === null) {
+        centerName = adminCenterById.get(String(centerId))?.name || 'this center';
+      }
       if (!confirm(`Delete "${centerName}"? This action cannot be undone.`)) { return; }
 
       try {
@@ -732,6 +798,7 @@ require_once __DIR__ . '/layout.php';
           showToast('Center deleted', 'success');
           const row = document.getElementById(`row-${centerId}`);
           if (row) row.remove();
+          setTimeout(() => window.location.reload(), 600);
         } else {
           showToast(result.error || 'Delete failed', 'error');
         }

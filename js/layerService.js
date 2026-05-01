@@ -452,6 +452,9 @@ async function loadGisLayer(slug, styleKey, spinnerKey) {
 
   if (layerData === null || layerData.geojson_data === null) { return; }
 
+  // Skip layers that are hidden in admin
+  if (layerData.is_visible === 0 || layerData.is_visible === false) { return; }
+
   // Pop density has no geometry — join against boundary polygons by barangay name
   if (styleKey === 'population-density') {
     const boundaryLayer = layerCache['cabanatuan-boundary'];
