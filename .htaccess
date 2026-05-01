@@ -1,0 +1,73 @@
+# ============================================
+# CabEvac — Apache Configuration
+# ============================================
+
+# Disable directory listing
+Options -Indexes
+
+# Enable URL rewriting
+RewriteEngine On
+
+# ============================================
+# BLOCK ACCESS TO SENSITIVE FILES
+# ============================================
+
+# Block .env files
+<FilesMatch "^\.env">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Block access to includes directory
+<IfModule mod_rewrite.c>
+  RewriteRule ^includes/ - [F,L]
+  RewriteRule ^logs/ - [F,L]
+  RewriteRule ^database/ - [F,L]
+</IfModule>
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Enable XSS filter
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Content Security Policy
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://mt1.google.com https://mt2.google.com https://mt3.google.com https://*.tile.opentopomap.org https://services.arcgisonline.com https://server.arcgisonline.com; connect-src 'self';"
+
+  # Permissions policy
+  Header always set Permissions-Policy "geolocation=(self), camera=(), microphone=()"
+</IfModule>
+
+# ============================================
+# COMPRESSION
+# ============================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# ============================================
+# CACHING
+# ============================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>

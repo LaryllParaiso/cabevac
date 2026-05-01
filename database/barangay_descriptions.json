@@ -1,0 +1,625 @@
+[
+  {
+    "no": 1,
+    "name": "Aduas Centro",
+    "flood_risk_level": "High",
+    "land_use": "Commercial/Residential",
+    "description": "A central commercial and residential barangay where High flood risk threatens economic activity, with secondary road connections along its evacuation route that may be disrupted during major flood events."
+  },
+  {
+    "no": 2,
+    "name": "Aduas Norte",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential",
+    "description": "A densely populated residential barangay in the urban core that experiences rapid and severe flooding, with secondary road access to its evacuation center that becomes highly vulnerable during peak flood events."
+  },
+  {
+    "no": 3,
+    "name": "Aduas Sur",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential",
+    "description": "A medium-density residential barangay in the city center where severe flooding significantly disrupts daily life, with secondary road connections that may be compromised during major flood events."
+  },
+  {
+    "no": 4,
+    "name": "Bagong Buhay",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural/Light Industrial",
+    "description": "A predominantly agricultural barangay in the eastern periphery with low flood risk, though seasonal flooding may still affect farmlands and light industrial areas during extreme weather events."
+  },
+  {
+    "no": 5,
+    "name": "Bagong Sikat",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural",
+    "description": "An agricultural barangay in the northeastern zone where High flood risk regularly inundates farmlands and disrupts rural livelihoods, with tertiary road access that is highly vulnerable during typhoon-induced flooding."
+  },
+  {
+    "no": 6,
+    "name": "Bakero",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural",
+    "description": "An agricultural barangay in the eastern corridor where High flood risk damages crops and farmlands, with tertiary road access that becomes impassable during severe weather events."
+  },
+  {
+    "no": 7,
+    "name": "Bakod Bayan",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A large agricultural barangay in the southeastern zone with low flood susceptibility, though farmlands may be periodically affected during major typhoon events."
+  },
+  {
+    "no": 8,
+    "name": "Balite",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the northern zone with low flood risk, though residents should remain vigilant during extreme rainfall and typhoon events."
+  },
+  {
+    "no": 9,
+    "name": "Bangad",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed residential-agricultural barangay in the central-eastern zone where moderate flooding periodically affects farmlands and residential areas, with secondary road connections that remain generally passable during most flood events."
+  },
+  {
+    "no": 10,
+    "name": "Bantug Bulalo",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the northern zone with low flood susceptibility, with tertiary road access that may be periodically affected during heavy rainfall and major typhoon events."
+  },
+  {
+    "no": 11,
+    "name": "Bantug Norte",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed residential-agricultural barangay in the eastern corridor where moderate flooding periodically damages farmlands, with tertiary road access that may be affected during heavy rainfall events."
+  },
+  {
+    "no": 12,
+    "name": "Barlis",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the northern urban fringe with low flood risk, though tertiary road access may be periodically affected during heavy rainfall and typhoon events."
+  },
+  {
+    "no": 13,
+    "name": "Barrera District",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A densely populated residential-commercial poblacion barangay in the urban core with low flood susceptibility, served by primary road connections that provide reliable evacuation access during most weather events."
+  },
+  {
+    "no": 14,
+    "name": "Bernardo District",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A mixed residential-commercial poblacion barangay in the city center with low flood risk, served by primary road connections along major urban thoroughfares that remain accessible during most weather conditions."
+  },
+  {
+    "no": 15,
+    "name": "Bitas",
+    "flood_risk_level": "Low",
+    "land_use": "Residential",
+    "description": "A residential barangay with relatively low flood susceptibility, served by secondary road connections that provide reliable access to its designated evacuation center during most weather events."
+  },
+  {
+    "no": 16,
+    "name": "Bonifacio District",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A densely populated residential-commercial poblacion barangay in the urban core with low flood susceptibility, served by primary road connections that remain reliable during most weather events."
+  },
+  {
+    "no": 17,
+    "name": "Buliran",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the northern corridor with low flood susceptibility, though farmlands along low-lying areas may still be affected during major weather events."
+  },
+  {
+    "no": 18,
+    "name": "Caalibangbangan",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "An agricultural barangay along the northwestern corridor with low flood risk, served by primary road access along the Maharlika Highway that remains reliable during most weather conditions."
+  },
+  {
+    "no": 19,
+    "name": "Cabu",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A large agricultural barangay in the far eastern periphery with low flood susceptibility, though its distance from urban evacuation centers increases vulnerability during rare but severe flood events."
+  },
+  {
+    "no": 20,
+    "name": "Calawagan",
+    "flood_risk_level": "Very High",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the northeastern corridor where Very High flood risk threatens farmlands and homes, with limited tertiary road access that becomes critically impassable during major flood events."
+  },
+  {
+    "no": 21,
+    "name": "Campo Tinio",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the central-eastern zone with low flood susceptibility, with tertiary road access that may be affected during extreme rainfall events."
+  },
+  {
+    "no": 22,
+    "name": "Caridad",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that provide reliable access to evacuation facilities during most weather events."
+  },
+  {
+    "no": 23,
+    "name": "Caudillo",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay in the western urban zone highly susceptible to severe flooding, where reliance on tertiary road access to its evacuation center significantly increases evacuation risk during disasters."
+  },
+  {
+    "no": 24,
+    "name": "Cinco-Cinco",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A low-density agricultural barangay in the western periphery with low flood risk, though its reliance on tertiary road access means evacuation routes may still be affected during extreme weather."
+  },
+  {
+    "no": 25,
+    "name": "City Supermarket",
+    "flood_risk_level": "Low",
+    "land_use": "Major Commercial",
+    "description": "A major commercial district barangay in the urban core with low flood susceptibility, served by primary road connections along major city thoroughfares that remain accessible during most weather events."
+  },
+  {
+    "no": 26,
+    "name": "Communal",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the far northeastern zone bordering Palayan City where High flood risk threatens farmlands and homes, with limited tertiary road access during flood emergencies."
+  },
+  {
+    "no": 27,
+    "name": "Cruz Roja",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural",
+    "description": "An agricultural barangay in the central-eastern zone where High flood risk causes significant damage to farmlands and displaces residents, with tertiary road connections vulnerable to inundation during flood events."
+  },
+  {
+    "no": 28,
+    "name": "Daang Sarile",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed residential-agricultural barangay in the northern urban corridor where moderate flooding occasionally disrupts daily life and agricultural activities, served by secondary road connections."
+  },
+  {
+    "no": 29,
+    "name": "Dalampang",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the northern zone with low flood risk, though tertiary road access may be periodically affected during heavy rainfall and typhoon events."
+  },
+  {
+    "no": 30,
+    "name": "Dicarma",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A mixed residential-commercial poblacion barangay in the urban core with low flood susceptibility, served by secondary road connections that remain accessible during most weather conditions."
+  },
+  {
+    "no": 31,
+    "name": "Dimasalang",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that provide reliable evacuation access during most weather events."
+  },
+  {
+    "no": 32,
+    "name": "Dionisio S. Garcia",
+    "flood_risk_level": "High",
+    "land_use": "Commercial/Residential",
+    "description": "A mixed residential-commercial barangay in the southern urban zone where flooding disrupts livelihoods, with secondary road access that may be partially inundated during typhoon-induced flooding."
+  },
+  {
+    "no": 33,
+    "name": "Fatima",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that provide generally reliable access to evacuation facilities during most weather events."
+  },
+  {
+    "no": 34,
+    "name": "General Luna",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A mixed residential-commercial poblacion barangay in the city center with low flood susceptibility, served by primary road connections along major urban thoroughfares that remain reliable during most weather events."
+  },
+  {
+    "no": 35,
+    "name": "Hermogenes C. Concepcion, Sr.",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that provide reliable access to evacuation facilities during most weather events."
+  },
+  {
+    "no": 36,
+    "name": "Ibabao Bana",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the western zone where moderate flooding damages crops and disrupts rural livelihoods, with deteriorating tertiary road conditions further limiting evacuation access during flood events."
+  },
+  {
+    "no": 37,
+    "name": "Imelda District",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential/Commercial",
+    "description": "A mixed residential-commercial barangay where Very High flood risk causes significant economic losses and displacement, with secondary road access that may be rendered impassable during typhoon-induced flooding."
+  },
+  {
+    "no": 38,
+    "name": "Isla",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential",
+    "description": "A flood-prone residential barangay where rapidly rising floodwaters isolate residents and render tertiary local roads completely impassable, severely hindering evacuation during major flood events."
+  },
+  {
+    "no": 39,
+    "name": "Kalikid Norte",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A large agricultural barangay in the eastern periphery with low flood susceptibility, though farmlands may be periodically affected and tertiary road access may be limited during extreme weather events."
+  },
+  {
+    "no": 40,
+    "name": "Kalikid Sur",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the southeastern periphery with low flood risk, with tertiary road access that remains generally passable during most weather conditions."
+  },
+  {
+    "no": 41,
+    "name": "Kapitan Pepe",
+    "flood_risk_level": "Low",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay in the eastern urban zone with low flood susceptibility, served by secondary road connections that provide reliable evacuation access during most weather events."
+  },
+  {
+    "no": 42,
+    "name": "Lagare",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay where High flood risk regularly submerges farmlands, causing significant livelihood losses and displacement of residents during typhoon-induced flood events."
+  },
+  {
+    "no": 43,
+    "name": "Lourdes",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A residential-agricultural barangay in the central zone where moderate flood risk poses periodic displacement risks to residents, with secondary road access that remains generally reliable during most weather events."
+  },
+  {
+    "no": 44,
+    "name": "M. S. Garcia",
+    "flood_risk_level": "Moderate",
+    "land_use": "Residential",
+    "description": "A residential barangay in the urban core where moderate flood risk poses periodic displacement risks, with secondary road connections providing relatively reliable access to its designated evacuation center."
+  },
+  {
+    "no": 45,
+    "name": "Mabini Extension",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential barangay in the central urban zone with low flood susceptibility, served by secondary road connections that provide relatively dependable evacuation access during most flood events."
+  },
+  {
+    "no": 46,
+    "name": "Mabini Homesite",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential barangay with low flood risk in the urban core, with secondary road access to its evacuation center that remains generally passable during most weather events."
+  },
+  {
+    "no": 47,
+    "name": "Macatbong",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the far eastern periphery with low flood susceptibility, with tertiary road access that may be affected during extreme rainfall events."
+  },
+  {
+    "no": 48,
+    "name": "Magsaysay District",
+    "flood_risk_level": "Low",
+    "land_use": "Residential/Commercial",
+    "description": "A mixed residential-commercial barangay with low flood susceptibility in the eastern urban zone, served by secondary road connections that provide reliable evacuation access during most flood events."
+  },
+  {
+    "no": 49,
+    "name": "Magsaysay South",
+    "flood_risk_level": "Low",
+    "land_use": "Residential",
+    "description": "A residential barangay with low flood risk in the eastern urban zone, with secondary road access providing generally reliable evacuation routes during most weather events."
+  },
+  {
+    "no": 50,
+    "name": "Maria Theresa",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A residential-commercial poblacion barangay in the urban core with low flood susceptibility, served by primary road connections that remain reliable during most weather conditions."
+  },
+  {
+    "no": 51,
+    "name": "Matadero",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A small residential barangay in the urban core with low flood risk and the shortest distance to its evacuation center, served by secondary road connections that remain passable during most flood events."
+  },
+  {
+    "no": 52,
+    "name": "Mayapyap Norte",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the northwestern zone with low flood risk, though tertiary road access and proximity to flood-prone areas warrant caution during major typhoon events."
+  },
+  {
+    "no": 53,
+    "name": "Mayapyap Sur",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the northwestern corridor with low flood susceptibility, with tertiary road access that may be periodically affected during heavy rainfall events."
+  },
+  {
+    "no": 54,
+    "name": "Melojavilla",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A small residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that remain generally passable during most weather conditions."
+  },
+  {
+    "no": 55,
+    "name": "Nabao",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A small low-risk residential barangay in the urban core with secondary road access, though indirect road routing to its evacuation center extends actual travel time despite short physical distance."
+  },
+  {
+    "no": 56,
+    "name": "Obrero",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed residential-agricultural barangay in the northeastern corridor where High flood risk threatens both residential areas and farmlands, with secondary road access that may be compromised during major flood events."
+  },
+  {
+    "no": 57,
+    "name": "Padre Burgos",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A mixed residential-commercial poblacion barangay in the urban core with low flood risk, served by primary road connections along major city thoroughfares that remain accessible during most weather events."
+  },
+  {
+    "no": 58,
+    "name": "Padre Crisostomo",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A residential-commercial poblacion barangay in the city center with low flood susceptibility, served by primary road connections that provide reliable evacuation access during most weather conditions."
+  },
+  {
+    "no": 59,
+    "name": "Pagas",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the western urban fringe where moderate flooding periodically damages crops, with tertiary road access that may be affected during heavy rainfall and typhoon events."
+  },
+  {
+    "no": 60,
+    "name": "Palagay",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the far western periphery with low flood risk, with tertiary road access along the western corridor that may be periodically affected during heavy rainfall."
+  },
+  {
+    "no": 61,
+    "name": "Pamaldan",
+    "flood_risk_level": "Very High",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay situated along flood-vulnerable lowlands where residents face rapid inundation, with tertiary road access to its evacuation center that is among the first to flood during heavy rainfall."
+  },
+  {
+    "no": 62,
+    "name": "Pangatian",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A large agricultural barangay in the eastern zone with low flood susceptibility, though seasonal flooding may still affect farmlands along low-lying areas during major weather events."
+  },
+  {
+    "no": 63,
+    "name": "Patalac",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the far southeastern periphery with low flood risk, with tertiary road access that remains generally reliable during most weather conditions."
+  },
+  {
+    "no": 64,
+    "name": "Polilio",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the southwestern periphery with low flood susceptibility, served by tertiary roads that remain generally passable during most weather conditions."
+  },
+  {
+    "no": 65,
+    "name": "Pula",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the far northern zone with low flood risk, with tertiary road access that may be periodically affected during extreme rainfall and typhoon events."
+  },
+  {
+    "no": 66,
+    "name": "Quezon District",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A densely populated residential-commercial poblacion barangay with low flood susceptibility, served by primary road connections in the urban core that remain reliable during most weather events."
+  },
+  {
+    "no": 67,
+    "name": "Rizdelis",
+    "flood_risk_level": "Moderate",
+    "land_use": "Residential",
+    "description": "A small residential barangay in the urban zone where moderate flooding occasionally affects residents, with secondary road access providing relatively dependable evacuation routes during flood events."
+  },
+  {
+    "no": 68,
+    "name": "Samon",
+    "flood_risk_level": "High",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay in the western urban corridor where floodwaters rapidly inundate low-lying areas, with tertiary local roads that become impassable early during flood events, hindering timely evacuation."
+  },
+  {
+    "no": 69,
+    "name": "San Isidro",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed agricultural-residential barangay in the central-eastern zone where moderate flood risk periodically threatens farmlands and homes, with secondary road connections that remain generally passable during most flood events."
+  },
+  {
+    "no": 70,
+    "name": "San Josef Norte",
+    "flood_risk_level": "High",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay in the western corridor where High flood risk and reliance on tertiary road access make evacuation particularly challenging and dangerous during major flood events."
+  },
+  {
+    "no": 71,
+    "name": "San Josef Sur",
+    "flood_risk_level": "Low",
+    "land_use": "Residential",
+    "description": "A predominantly residential barangay with low flood susceptibility in the southwestern zone, served by secondary road access that remains generally reliable during most weather events."
+  },
+  {
+    "no": 72,
+    "name": "San Juan Poblacion",
+    "flood_risk_level": "High",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A densely populated urban barangay where flooding inundates residential and commercial areas, with secondary road connections that may be compromised during severe typhoon-induced flood events."
+  },
+  {
+    "no": 73,
+    "name": "San Roque Norte",
+    "flood_risk_level": "Moderate",
+    "land_use": "Residential/Commercial",
+    "description": "A mixed residential-commercial barangay in the southern urban zone where moderate flood risk periodically disrupts economic activity and daily life, served by secondary road connections."
+  },
+  {
+    "no": 74,
+    "name": "San Roque Sur",
+    "flood_risk_level": "Moderate",
+    "land_use": "Residential/Commercial",
+    "description": "A mixed residential-commercial barangay in the southern urban area where moderate flooding periodically disrupts economic activity, with secondary road access that remains generally passable during moderate flood events."
+  },
+  {
+    "no": 75,
+    "name": "Sanbermicristi",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A small residential poblacion barangay in the urban core with low flood risk, served by secondary road connections that provide reliable access to evacuation facilities during most weather events."
+  },
+  {
+    "no": 76,
+    "name": "Sangitan",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential",
+    "description": "A residential poblacion barangay in the urban core with low flood susceptibility, served by secondary road connections that remain generally accessible during most weather conditions."
+  },
+  {
+    "no": 77,
+    "name": "Sangitan East",
+    "flood_risk_level": "Moderate",
+    "land_use": "Residential",
+    "description": "A small residential barangay in the urban core where moderate flood risk occasionally affects residents, though indirect tertiary road routing extends actual travel time to its evacuation center significantly."
+  },
+  {
+    "no": 78,
+    "name": "Santa Arcadia",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural/Residential",
+    "description": "A residential-agricultural barangay in the southern zone where High flood risk threatens both farmlands and homes, with secondary road access that may be affected during major flood events."
+  },
+  {
+    "no": 79,
+    "name": "Santo Niño",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the southwestern zone with low flood risk, with tertiary road access along the southwestern corridor that may be periodically affected during heavy rainfall."
+  },
+  {
+    "no": 80,
+    "name": "Sapang",
+    "flood_risk_level": "Low",
+    "land_use": "Agricultural",
+    "description": "A rural agricultural barangay in the northern corridor with low flood susceptibility, though tertiary road access may be limited during heavy rainfall and major typhoon events."
+  },
+  {
+    "no": 81,
+    "name": "Sumacab Este",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural",
+    "description": "An agricultural barangay in the southwestern corridor where moderate flooding periodically damages farmlands, with tertiary roads and vulnerable bridge crossings that may restrict evacuation access during flood events."
+  },
+  {
+    "no": 82,
+    "name": "Sumacab Norte",
+    "flood_risk_level": "Very High",
+    "land_use": "Agricultural",
+    "description": "A largely agricultural barangay in the southwestern corridor where severe flooding destroys crops and farmlands, with tertiary road access and timber bridge crossings that become critically impassable during major flood events."
+  },
+  {
+    "no": 83,
+    "name": "Sumacab South",
+    "flood_risk_level": "High",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed agricultural-residential barangay where floodwaters regularly submerge farmlands and homes, with tertiary roads and vulnerable bridge crossings that severely restrict evacuation movement during disasters."
+  },
+  {
+    "no": 84,
+    "name": "Talipapa",
+    "flood_risk_level": "High",
+    "land_use": "Residential",
+    "description": "A predominantly residential barangay in the southwestern zone where High flood risk and tertiary road access with vulnerable bridge crossings significantly increase evacuation risk during major flood emergencies."
+  },
+  {
+    "no": 85,
+    "name": "Valdefuente",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural/Residential",
+    "description": "A mixed residential-agricultural barangay in the northern urban fringe where moderate flood risk poses periodic threats, with secondary road access along the Valdefuente-Fortaleza Road corridor that remains relatively reliable during moderate flooding."
+  },
+  {
+    "no": 86,
+    "name": "Valle Cruz",
+    "flood_risk_level": "Moderate",
+    "land_use": "Agricultural",
+    "description": "A predominantly agricultural barangay in the southeastern zone where moderate flooding periodically damages farmlands and disrupts rural livelihoods, with tertiary road access vulnerable during heavy rainfall events."
+  },
+  {
+    "no": 87,
+    "name": "Vijandre District",
+    "flood_risk_level": "Moderate",
+    "land_use": "Medium Density Residential/Commercial",
+    "description": "A mixed residential-commercial barangay in the urban core where moderate flood risk poses periodic threats to residents and businesses, served by secondary road connections that remain generally accessible during most weather events."
+  },
+  {
+    "no": 88,
+    "name": "Villa Ofelia-Caridad",
+    "flood_risk_level": "Low",
+    "land_use": "Medium Density Residential",
+    "description": "A residential barangay in the eastern urban zone with low flood susceptibility, served by secondary road connections that provide reliable evacuation access during most weather events."
+  },
+  {
+    "no": 89,
+    "name": "Zulueta District",
+    "flood_risk_level": "Low",
+    "land_use": "High Density Residential/Commercial",
+    "description": "A densely populated mixed residential-commercial poblacion barangay in the city center with low flood risk, home to major landmarks including the Iglesia ni Cristo chapel, served by primary road connections that remain reliable during most weather events."
+  }
+]
