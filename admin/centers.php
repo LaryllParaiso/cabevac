@@ -527,7 +527,7 @@ require_once __DIR__ . '/layout.php';
           div.className = 'upload-preview';
           div.innerHTML = `
             <img src="../${DOMPurify.sanitize(img.image_path)}" alt="${DOMPurify.sanitize(img.alt_text || '')}">
-            <div class="upload-preview__name" style="font-size: 10px; text-align: center; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;" title="${DOMPurify.sanitize(img.original_filename || '')}">${DOMPurify.sanitize(img.original_filename || '')}</div>
+            <input type="text" class="upload-preview__input" value="${DOMPurify.sanitize(img.display_name || '')}" placeholder="Enter display name" onblur="updateImageName(${img.id}, this)">
             <button type="button" class="upload-preview__remove" onclick="deleteImage(${img.id}, this)">✕</button>
           `;
           previews.appendChild(div);
@@ -667,7 +667,7 @@ require_once __DIR__ . '/layout.php';
             div.className = 'upload-preview';
             div.innerHTML = `
               <img src="../${DOMPurify.sanitize(result.data.image_path)}" alt="">
-              <div class="upload-preview__name" style="font-size: 10px; text-align: center; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;" title="${DOMPurify.sanitize(result.data.original_filename || '')}">${DOMPurify.sanitize(result.data.original_filename || '')}</div>
+              <input type="text" class="upload-preview__input" value="${DOMPurify.sanitize(result.data.display_name || '')}" placeholder="Enter display name" onblur="updateImageName(${result.data.id}, this)">
               <button type="button" class="upload-preview__remove" onclick="deleteImage(${result.data.id}, this)">✕</button>
             `;
             previews.appendChild(div);
@@ -693,6 +693,28 @@ require_once __DIR__ . '/layout.php';
         }
       } catch (error) {
         showToast('Delete failed', 'error');
+      }
+    }
+
+    async function updateImageName(imageId, inputElement) {
+      const newName = inputElement.value.trim();
+      try {
+        const response = await fetch('../api/admin/update_image_name.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: imageId, display_name: newName })
+        });
+        const result = await response.json();
+        if (result.success) {
+          inputElement.style.borderColor = 'var(--color-success)';
+          setTimeout(() => inputElement.style.borderColor = 'transparent', 1500);
+        } else {
+          showToast(result.error || 'Failed to update name', 'error');
+          inputElement.style.borderColor = 'var(--color-error)';
+        }
+      } catch (error) {
+        showToast('Network error', 'error');
+        inputElement.style.borderColor = 'var(--color-error)';
       }
     }
 

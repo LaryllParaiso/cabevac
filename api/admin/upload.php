@@ -85,7 +85,7 @@ function handleUpload(): void
 
     try {
     $insertStmt = $db->prepare(
-            'INSERT INTO evacuation_center_images (evacuation_center_id, image_path, alt_text, sort_order, original_filename)
+            'INSERT INTO evacuation_center_images (evacuation_center_id, image_path, alt_text, sort_order, display_name)
              VALUES (?, ?, ?, ?, ?)'
         );
 
@@ -109,7 +109,7 @@ function handleUpload(): void
             'image_path' => $imagePath,
             'alt_text' => $altText,
             'sort_order' => $nextOrder,
-            'original_filename' => $originalFilename,
+            'display_name' => $originalFilename,
         ], 201);
 
     } catch (Exception $e) {

@@ -544,7 +544,7 @@ function openImageLightbox(images, startIndex = 0) {
     
     setTimeout(() => {
       imgEl.src = DOMPurify.sanitize(img.image_path);
-      titleEl.textContent = img.original_filename ? DOMPurify.sanitize(img.original_filename) : '';
+      titleEl.textContent = img.display_name ? DOMPurify.sanitize(img.display_name) : '';
       updateDots();
       
       // Animate in

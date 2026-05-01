@@ -51,7 +51,7 @@ try {
 
         // Fetch images
         $imgStmt = $db->prepare(
-            'SELECT id, image_path, alt_text, sort_order, original_filename
+            'SELECT id, image_path, alt_text, sort_order, display_name
              FROM evacuation_center_images
              WHERE evacuation_center_id = ?
              ORDER BY sort_order ASC'
@@ -105,7 +105,7 @@ try {
         $placeholders = implode(',', array_fill(0, count($centerIds), '?'));
 
         $imgStmt = $db->prepare(
-            "SELECT id, evacuation_center_id, image_path, alt_text, sort_order, original_filename
+            "SELECT id, evacuation_center_id, image_path, alt_text, sort_order, display_name
              FROM evacuation_center_images
              WHERE evacuation_center_id IN ({$placeholders})
              ORDER BY sort_order ASC"
